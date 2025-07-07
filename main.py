@@ -6,10 +6,6 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-@app.route('/hello/<name>')
-def greetings(name):
-	return f'Привет, {name}'
-
 @app.errorhandler(404)
 def not_found(e):
 	return render_template('404.html', 404)
