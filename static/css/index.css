@@ -1,11 +1,14 @@
 body {
-    font-size: 50;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    background-image: url('/static/images/bright_squares.png');
 }
-h1 {
-    font-family: Tahoma, monospace;
+table, tr, th, td {
+    border: 2px solid rgb(80, 33, 33);
+    font-size: 15px;
+    border-collapse: collapse;
 }
-p {
-    font-size: 5;
+a {
+    color: rgb(152, 132, 228);
 }
