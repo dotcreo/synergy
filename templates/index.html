@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask app</title>
+    <title>Обучение Flask: {% block title %}Прогресс прохождения{% endblock %}</title>
     <link rel="stylesheet" href="../static/css/index.css">
 </head>
 <body>
-    <a href='/'><img src="/static/images/flask-name.svg" width="353" height="150" alt="Логотип"></a>
-    <h1>Курс Flask</h1>
-    <p>Прогресс прохождения курса</p>
-    <table>
+    <div style="text-align: center;">
+        <a href='/'><img src="/static/images/flask-name.svg" width="353" height="150" alt="Логотип"></a>
+        <h1>Курс Flask</h1>
+    </div>
+{% block content %}
+    <h2>Прогресс прохождения курса</h2>
+    <table style="border: 2px solid rgb(80, 33, 33);">
         <tr>
             <th></th>
             <th>Основы Flask</th>
@@ -25,8 +28,8 @@
         <tr>
             <th style="text-align: right">% выполнения темы</th>
             <td>100%<br><progress value="100" max="100"></td>
-            <td>85%<br><progress value="85" max="100"></td>
-            <td>0%<br><progress value="0" max="100"></td>
+            <td>100%<br><progress value="100" max="100"></td>
+            <td>100%<br><progress value="100" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
@@ -36,8 +39,8 @@
         <tr>
             <th style="text-align: right">% выполнения задания</th>
             <td>100%<br><progress value="100" max="100"></td>
+            <td>100%<br><progress value="100" max="100"></td>
             <td>50%<br><progress value="50" max="100"></td>
-            <td>0%<br><progress value="0" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
             <td>0%<br><progress value="0" max="100"></td>
@@ -48,7 +51,7 @@
             <th style="text-align: right">Комментарий</th>
             <td>-</td>
             <td>-</td>
-            <td>-</td>
+            <td>Почти все</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -56,5 +59,11 @@
             <td>-</td>
         </tr>
     </table>
+    <br>
+    <div>
+        <a href="/note"><b>Дневник программиста</b></a>
+    </div>
+
+{% endblock %}
 </body>
 </html>

@@ -1,14 +1,32 @@
 body {
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
+    font-size: 16px;
+    font-family: "Ubuntu variable", Ubuntu, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, sans-serif;
     background-image: url('/static/images/bright_squares.png');
 }
-table, tr, th, td {
-    border: 2px solid rgb(80, 33, 33);
+
+a {
+    color: rgb(22, 6, 7);
+    text-decoration: none;
+}
+
+table, td, th, tr {
+    border: 2px solid black;
+    border-radius: 10px;
     font-size: 15px;
     border-collapse: collapse;
+    text-align: center;
 }
-a {
-    color: rgb(152, 132, 228);
+
+input {
+    width: 30%;
+    height: 30px;
+    font-size: large;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    color: black;
+    background-color: #cfc8c8;
+    font-size: 20px;
 }
