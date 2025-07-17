@@ -6,29 +6,31 @@
         <td style="text-align: left; border: hidden;">
             <form action="/note" method="post">
                 <label for="title"><i>Заголовок записи</i></label><br>
-                <input type="text" id="title" name="title" placeholder="Введите заголовок записи..."><br>
+                <input type="text" id="title" name="title" placeholder="Введите заголовок записи"><br>
+
+                <label for="subtitle"><i>Подзаголовок записи</i></label><br>
+                <input type="text" id="subtitle" name="subtitle" placeholder="Введите подзаголовок записи"><br>
+
                 <label for="string"><i>Текст записи</i></label><br>
-                <input type="text" id="string" name="string" placeholder="Введите текст записи..."><br><br>
+                <input type="text" id="string" name="string" placeholder="Введите текст записи"><br><br>
+
                 <button type="submit" style="size: 34px;">Отправить</button>
             </form>
         </td>
     </tr>
     <tr>
         <td style="text-align: left;">
+            <a href="/delete"><i>Удалить все записи</i></a>
             <h1>Записи:</h1>
-            {% if data %}
-                <ol>
-                    {% for title, text in data.items() %}
-                        <li>
-                            <b>{{ title }}</b><br>
-                            <i>{{ text }}</i>
-                        </li>
-                        <br>
-                    {% endfor %}
-                </ol>
-            {% else %}
-                <b>Записей пока нет</b>
-            {% endif %}
+            <ol>
+            {% for note in notes %}
+                <li>
+                    <b>{{ note.title }}</b><br>
+                    <div>{{ note.subtitle }}</div>
+                    <i>{{ note.text}}</i>
+                </li><br>
+            {% endfor %}
+            </ol>
         </td>
     </tr>
 </table>

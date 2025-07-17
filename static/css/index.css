@@ -9,14 +9,6 @@ a {
     text-decoration: none;
 }
 
-table, td, th, tr {
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 15px;
-    border-collapse: collapse;
-    text-align: center;
-}
-
 input {
     width: 30%;
     height: 30px;
@@ -29,4 +21,12 @@ button {
     color: black;
     background-color: #cfc8c8;
     font-size: 20px;
+}
+
+.table_progress, th, td, tr {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    border-collapse: collapse;
+    text-align: center;
 }

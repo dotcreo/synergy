@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Регистрация нового пользователя
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <form action='/register' method="POST">
+        <label for="username">Логин</label>
+        <input type="text" id="username" name="username" placeholder="Введите логин"><br>
+
+        <label for="email">Почта</label>
+        <input type="text" id="email" name="email" placeholder="Введите почту"><br>   
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Введите пароль"><br><br>
+
+        <button type="submit" style="size: 34px;">Зарегистрироваться</button>
+    </form>
+</div>
+{% endblock %}

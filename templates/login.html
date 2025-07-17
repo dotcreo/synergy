@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Авторизация пользователя
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <form action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Введите почту"><br>
+        <label for="password">Пароль</label>
+        <input type="text" id="password" name="password" placeholder="Введите пароль"><br><br>
+        <button type="submit" style="size: 34px;">Войти</button>
+    </form>
+</div>
+{% endblock %}
